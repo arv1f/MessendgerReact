@@ -7,6 +7,8 @@ import { useBackGroundStore } from "../../store";
 export default function HomePage() {
   const [isHover, setIsHover] = useState<number>(-1);
   const [filterList, setFilterList] = useState<boolean>(false);
+  const [theme, setTheme] = useState<"white" | "black">("black");
+  const [value, setValue] = useState<string>("");
   const { data, isLoading, isError } = useGetUsersList();
   const { setBackGround } = useBackGroundStore();
   return (
@@ -26,13 +28,45 @@ export default function HomePage() {
         >
           ★
         </button>
+        <button
+          style={
+            {
+              // backgroundColor: theme === "white" ? "white" : "black",
+            }
+          }
+          className="ButtonLeft"
+          onClick={() => {
+            setTheme(theme === "white" ? "black" : "white");
+          }}
+        >
+          {theme === "white" ? "☀" : "☾"}
+        </button>
       </div>
       <div className="ContainerHome">
-        <input type="text" placeholder="Search" className="InputSearch" />
+        <input
+          id="inputSearch"
+          type="text"
+          placeholder="Search to first name..."
+          className="InputSearch"
+          onChange={() => {
+            if (
+              (document.getElementById("inputSearch") as HTMLInputElement)
+                .value !== null
+            ) {
+              setValue(
+                (document.getElementById("inputSearch") as HTMLInputElement)
+                  .value,
+              );
+            }
+          }}
+        />
         {data ? (
           <ul>
             {data.map((item: User) => {
-              if (filterList && item.favorite === false) {
+              if (
+                (filterList && item.favorite === false) ||
+                (value !== "" && !item.firstName.includes(value))
+              ) {
                 return null;
               }
               return (
