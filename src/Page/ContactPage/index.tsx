@@ -4,7 +4,8 @@ import useGetUsersList from "../../hooks/GetUsersList";
 import { useBackGroundStore } from "../../store";
 
 export default function ContactPage() {
-  const { backGround, setBackGround } = useBackGroundStore();
+  const { backGround, setBackGround, setUserWindow, userWindow } =
+    useBackGroundStore();
 
   const { data } = useGetUsersList();
   const parameters = useParams<{ contactId: string }>();
@@ -22,13 +23,7 @@ export default function ContactPage() {
         <div className="UserInfo">
           {backGround ? (
             <>
-              {
-                <img
-                  style={{ width: "10rem", height: "10rem" }}
-                  src={thisUser.avatar}
-                  className="imgItem"
-                />
-              }{" "}
+              {<img src={thisUser.avatar} className="imgItemCont" />}{" "}
               {
                 <h4 style={{ marginTop: "7rem" }}>
                   favorite: {thisUser.favorite ? "true" : "false"}
@@ -49,12 +44,19 @@ export default function ContactPage() {
                 className="ButtonOption"
                 onClick={() => {
                   setBackGround(false);
+                  setUserWindow(false);
                   navigane(`/contacts/${thisUser.id}/edit`);
                 }}
               >
                 Редактировать{" "}
               </button>
-              <button className="ButtonOption" onClick={() => navigane("/")}>
+              <button
+                className="ButtonOption"
+                onClick={() => {
+                  setUserWindow(false);
+                  navigane("/");
+                }}
+              >
                 Закрыть
               </button>
             </>

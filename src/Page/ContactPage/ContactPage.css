@@ -1,33 +1,85 @@
-.ContainerContact{
-    float: right;
-    width: 70%;
-    height: 100%;
-    background-color: #202020;
-    position: absolute;
-    top: 0%;
-    left: 30%;
-    padding-left: 0%;
-    z-index: 1;
+@media (min-width: 768px) {
+    .ContainerContact{
+        float: right;
+        width: 70%;
+        height: 100%;
+        background-color: #202020;
+        position: absolute;
+        top: 0%;
+        left: 30%;
+        padding-left: 0%;
+        z-index: 1;
+    }
+    .UserInfo{
+        display: grid;
+        padding: 1%;
+        gap: 1%;
+        grid-template-columns: 55% 40% ;
+        grid-template-rows: 43% 10% 15%;
+    }
+    .ButtonOption{
+        width: 10rem;
+        height: 3rem;
+        border-radius: 10px;
+        background-color: #202020;
+        border: solid 2px transparent;
+        color: white;
+        text-align: left;
+        padding-left: 0.5%;
+    }
+    .ButtonOption:hover{
+        border: solid 2px white;
+        background-color: #333333;
+        transition-duration: 0.4s;
+    }
+    .None{
+        display: none;
+    }
+    .imgItemCont{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
 }
-.UserInfo{
-    display: grid;
-    padding: 1%;
-    gap: 1%;
-    grid-template-columns: 55% 40% ;
-    grid-template-rows: 43% 10% 15%;
-}
-.ButtonOption{
-    width: 10rem;
-    height: 3rem;
-    border-radius: 10px;
-    background-color: #202020;
-    border: solid 2px transparent;
-    color: white;
-    text-align: left;
-    padding-left: 0.5%;
-}
-.ButtonOption:hover{
-    border: solid 2px white;
-    background-color: #333333;
-    transition-duration: 0.4s;
+@media (max-width: 768px) {
+    .None{
+        display: none;
+    }
+    .ContainerContact{
+        width: 100%;
+        height: 113%;
+        background-color: transparent;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        padding-left: 0%;
+        z-index: 1;
+    }
+    .UserInfo{
+        display: grid;
+        padding: 1%;
+        gap: 1%;
+        grid-template-columns: 45% 40% ;
+        grid-template-rows: 33% 10% 25%;
+    }
+    .ButtonOption{
+        width: 10rem;
+        height: 3rem;
+        border-radius: 10px;
+        background-color: #202020;
+        border: solid 2px transparent;
+        color: white;
+        text-align: left;
+        padding-left: 0.5%;
+    }
+    .ButtonOption:hover{
+        border: solid 2px white;
+        background-color: #333333;
+        transition-duration: 0.4s;
+    }
+    .imgItemCont{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+    }
 }

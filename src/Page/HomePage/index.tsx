@@ -10,7 +10,8 @@ export default function HomePage() {
   const [theme, setTheme] = useState<"white" | "black">("black");
   const [value, setValue] = useState<string>("");
   const { data, isLoading, isError } = useGetUsersList();
-  const { setBackGround } = useBackGroundStore();
+  const { setBackGround, setUserWindow } = useBackGroundStore();
+  const screenWidth = window.screen.availWidth;
   return (
     <div className="ContainerMain">
       <div className="ContainerLeft">
@@ -79,6 +80,7 @@ export default function HomePage() {
                   >
                     <Link
                       onClick={() => {
+                        setUserWindow(true);
                         setBackGround(true);
                       }}
                       to={{
@@ -114,17 +116,19 @@ export default function HomePage() {
           <p>Error</p>
         ) : null}
         <Outlet />
-        <div style={{ zIndex: 0 }} className="ContainerContact">
-          <div className="InitialPicture">
-            <div className="InitialPictureIn">
-              <div className="InPng">
-                <h1 style={{ marginTop: "1%", marginLeft: "-20%" }}>
-                  ViteReacTGram
-                </h1>
+        {screenWidth > 768 && (
+          <div className="ContainerContact" style={{ zIndex: 0 }}>
+            <div className="InitialPicture">
+              <div className="InitialPictureIn">
+                <div className="InPng">
+                  <h1 style={{ marginTop: "1%", marginLeft: "-20%" }}>
+                    ViteReacTGram
+                  </h1>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
