@@ -1,0 +1,136 @@
+.ContainerMain{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: #191919;
+}
+.ContainerHome{
+    float: left;
+    background-color: #232323;
+    padding-left: 1%;
+}
+.InitialPicture {
+    /* position: absolute;
+    width: 50%;
+    height: 50%;
+    margin-top: 20%;
+    margin-left: 30%; */
+    background: url("https://img.badfon.ru/original/1920x1200/d/36/zakat-vecher-temno.jpg") center/cover no-repeat;
+    /*https://cm.author.today/content/2021/01/24/a/d4536408a55b412393687516f63dcd0c.jpg*/
+    height: 100vh;/*https://bogatyr.club/uploads/posts/2023-03/1679099220_bogatyr-club-p-fon-sumerki-foni-oboi-1.jpg*/
+    width: 100%;
+}
+.InitialPictureIn {
+    content: "";
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    background: url("https://catherineasquithgallery.com/uploads/posts/2021-03/1614605487_28-p-chernie-pyatna-na-belom-fone-28.png") center/cover no-repeat;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: screen;
+    isolation: isolate;
+}
+.InPng{
+    color: white;
+    text-align: center;
+    background-color: #212121;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode:color-burn;
+}
+
+ul{
+    list-style-type: none;
+    display: grid;
+    gap: 0.7rem;
+}
+
+.UserContainer{
+    border: solid 2px transparent;
+    width: 25%;
+    position: relative;
+    border-radius: 10px;
+    display: grid;
+    text-align: left;
+    padding: 0.5%;
+    padding-top: 0.3%;
+    padding-bottom: 0.1%;
+}
+.UserContainer:hover{
+    border: solid 2px white;
+    background-color: #333333;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition-duration: 0.5s;
+}
+
+.UserContainer a{
+    color: aliceblue;
+}
+
+.imgItem{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.InputSearch{
+    width: 18rem;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left:2rem;
+    border: solid 1px black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+h4{
+    display: inline;
+}
+.ButtonLeft{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0%;
+    padding: 0%;
+    border: solid 1px black;
+    font-size: 30px;
+    text-align: center;
+}
+.ContainerLeft{
+    top: 1%;
+    left: 0.3%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    gap: 10px;
+}
+
+
+
+/* .blend-item {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ 
+ .blend {
+   width: 50%;
+   margin:0 auto;
+   padding-bottom: 50%;
+    border-radius: 50%;
+   background-image: linear-gradient(#DC4379,#11245E), url(https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg);
+   background-size: cover;
+ }
+ .blend.screen {
+    background-blend-mode: screen;
+  } */

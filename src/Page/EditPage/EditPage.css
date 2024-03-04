@@ -1,0 +1,38 @@
+.EditContainer{
+    border: solid 2px transparent;
+    width: 130%;
+    height: 200%;
+    background-color: transparent;
+    display: grid;
+    grid-template-rows: 30% 30% 30% 30%;
+    gap: 10%;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.EditContainer input{
+    color: white;
+    width: 75%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: rgba(179, 185, 245, 0.373);
+    border: solid 2px transparent;
+    font-size: 25px;
+}
+.EditButton{
+    font-size: 25px;
+    color: white;
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(179, 185, 245, 0.115);;
+    border: solid 2px transparent;
+    text-align: center;
+}
+/* .EditContainer:hover{
+    border: solid 2px white;
+    background-color: #191919;
+    transition-duration: 0.4s;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20%;
+} */

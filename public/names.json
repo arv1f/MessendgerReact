@@ -1,0 +1,67 @@
+{
+  "id": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "avatar": "https://sun6-23.userapi.com/s/v1/ig2/6lEWsI6m5oBYQFRaNo9BeJts2wFAbwDNHucOoILJd8GTJ2T1uzSWCveicL8NF0vLFaq6OrgeQPvt2pTV-iEw1qBj.jpg?size=1768x1768&quality=95&crop=0,323,1768,1768&ava=1",
+      "twitter": "@johndoe",
+      "notes": "Some to notes",
+      "favorite": true,
+      "id": 0
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Does",
+      "avatar": "https://i.imgur.com/70UGYbU.jpg",
+      "twitter": "@janedoe",
+      "notes": "San Sanich",
+      "favorite": false,
+      "id": 1
+    },
+    {
+      "firstName": "Vanechkin",
+      "lastName": "Do you speak english!!?",
+      "avatar": "https://s3.eu-central-1.amazonaws.com/images.hipdir/534323/dn0ednfd8fsyiwykrko3coia6hiu0qig.jpg",
+      "twitter": "@Vanechkin",
+      "notes": "Some catch",
+      "favorite": false,
+      "id": 2
+    },
+    {
+      "firstName": "lexa",
+      "lastName": "LeichterKampfwagen",
+      "avatar": "https://foni.club/uploads/posts/2023-01/1673608819_foni-club-p-krutie-oboi-nu-pogodi-47.jpg",
+      "twitter": "@lexa",
+      "notes": "Zayc catch",
+      "favorite": true,
+      "id": 3
+    },
+    {
+      "firstName": "Алексей",
+      "lastName": "Швабрин",
+      "avatar": "https://sun1-20.userapi.com/s/v1/ig2/rwW-ckNMAJ0kkpmuVozbH4Xo0iGN-_OIVp29DGmtV5lUAK31IcPnZAKeEioemnOT4Y_Zf3ciOQeC8JVtFdcE0G5Q.jpg?size=400x400&quality=95&crop=254,155,405,405&ava=1",
+      "twitter": "@alexey",
+      "notes": "ZaPygacheva",
+      "favorite": true,
+      "id": 4
+    },
+    {
+      "firstName": "Главная Мразь",
+      "lastName": "Ютуба",
+      "avatar": "https://i.ytimg.com/vi/L42FaQhlZdo/maxresdefault.jpg?7857057827",
+      "twitter": "@glavnyamraz",
+      "notes": "ZaPygachevyAlly",
+      "favorite": false,
+      "id": 5
+    },
+    {
+      "firstName": "Гнида Из",
+      "lastName": "Кадетов",
+      "avatar": "https://www.ovideo.ru/images/posters/0030/0225/0001.jpg",
+      "twitter": "@gnida",
+      "notes": "RealGnida",
+      "favorite": false,
+      "id": 6
+    }
+  ]
+}
