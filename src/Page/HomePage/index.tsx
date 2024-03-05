@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./HomePage.css";
 import { User } from "../../interface";
 import useGetUsersList from "../../hooks/GetUsersList";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useBackGroundStore } from "../../store";
 export default function HomePage() {
   const [isHover, setIsHover] = useState<number>(-1);
@@ -49,16 +49,8 @@ export default function HomePage() {
           type="text"
           placeholder="Search to first name..."
           className="InputSearch"
-          onChange={() => {
-            if (
-              (document.getElementById("inputSearch") as HTMLInputElement)
-                .value !== null
-            ) {
-              setValue(
-                (document.getElementById("inputSearch") as HTMLInputElement)
-                  .value,
-              );
-            }
+          onChange={(event: ChangeEvent<HTMLInputElement>) => {
+            setValue(event.target.value);
           }}
         />
         {data ? (
