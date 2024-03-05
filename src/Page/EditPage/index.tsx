@@ -4,7 +4,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import "./EditPage.css";
-import { useBackGroundStore } from "../../store";
 
 const schema = z.object({
   firstName: z.string().min(2),

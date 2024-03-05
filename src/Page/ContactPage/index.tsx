@@ -1,7 +1,6 @@
-import { Outlet, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./ContactPage.css";
 import useGetUsersList from "../../hooks/GetUsersList";
-import { useBackGroundStore } from "../../store";
 
 export default function ContactPage() {
   // const { backGround, setBackGround, setUserWindow, userWindow } =
@@ -23,26 +22,24 @@ export default function ContactPage() {
       <div style={{ marginLeft: "1%" }}>
         <div className="UserInfo">
           {/* {backGround ? ( */}
-          {true ? (
-            <>
-              {<img src={thisUser.avatar} className="imgItemCont" />}{" "}
-              {
-                <h4 style={{ marginTop: "7rem" }}>
-                  favorite: {thisUser.favorite ? "true" : "false"}
-                </h4>
-              }
-              {<h4>firstName: {thisUser.firstName}</h4>}
-              {<h4>lastName: {thisUser.lastName}</h4>}
-              {
-                <h4>
-                  twitter:{" "}
-                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    {thisUser.twitter}
-                  </a>
-                </h4>
-              }
-              {<h4>Notes: {<em>{thisUser.notes}</em>}</h4>}
-              {/* <button
+          {<img src={thisUser.avatar} className="imgItemCont" />}{" "}
+          {
+            <h4 style={{ marginTop: "7rem" }}>
+              favorite: {thisUser.favorite ? "true" : "false"}
+            </h4>
+          }
+          {<h4>firstName: {thisUser.firstName}</h4>}
+          {<h4>lastName: {thisUser.lastName}</h4>}
+          {
+            <h4>
+              twitter:{" "}
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                {thisUser.twitter}
+              </a>
+            </h4>
+          }
+          {<h4>Notes: {<em>{thisUser.notes}</em>}</h4>}
+          {/* <button
                 className="ButtonOption"
                 onClick={() => {
                   // setBackGround(false);
@@ -52,20 +49,16 @@ export default function ContactPage() {
               >
                 Редактировать{" "}
               </button> */}
-              <div></div>
-              <button
-                className="ButtonOption"
-                onClick={() => {
-                  // setUserWindow(false);
-                  navigane("/");
-                }}
-              >
-                Закрыть
-              </button>
-            </>
-          ) : (
-            <Outlet />
-          )}
+          <div></div>
+          <button
+            className="ButtonOption"
+            onClick={() => {
+              // setUserWindow(false);
+              navigane("/");
+            }}
+          >
+            Закрыть
+          </button>
         </div>
       </div>
     </div>

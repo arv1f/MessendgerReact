@@ -47,7 +47,11 @@
         height: 100%;
         mix-blend-mode:color-burn;
     }
-
+    .InPng h1{
+        width: 10rem;
+        margin-top: 1%;
+        margin-left: 20%;
+    }
     ul{
         list-style-type: none;
         display: grid;
@@ -83,7 +87,7 @@
     }
 
     .InputSearch{
-        width: 18rem;
+        width: 15rem;
         height: 1.5rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
