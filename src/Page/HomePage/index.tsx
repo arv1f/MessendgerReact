@@ -72,8 +72,8 @@ export default function HomePage() {
                   >
                     <Link
                       onClick={() => {
-                        setUserWindow(true);
-                        setBackGround(true);
+                        // setUserWindow(true);
+                        // setBackGround(true);
                       }}
                       to={{
                         pathname: `/contacts/${item.id}`,
@@ -84,12 +84,12 @@ export default function HomePage() {
                           style={{
                             // width: "3rem",
                             // height: "3rem",
-                            transition: "0.5s ease-in-out",
+                            transition: "3s ease-in-out",
                             border: `solid 2px ${isHover === item.id ? "blue" : "transparent"}`,
                             marginLeft: isHover === item.id ? "3%" : "-3%",
-                            // transform: isHover
-                            //   ? "rotate(360deg) rotateY(360deg) rotateZ(360deg) rotateX(360deg)"
-                            //   : "rotate(0deg)",
+                            transform: isHover
+                              ? "rotate(360deg) rotateY(360deg) rotateZ(360deg) rotateX(360deg)"
+                              : "rotate(0deg)",
                           }}
                           src={item.avatar}
                           className="imgItem"
@@ -114,7 +114,7 @@ export default function HomePage() {
               <div className="InitialPictureIn">
                 <div className="InPng">
                   <h1 style={{ marginTop: "1%", marginLeft: "-20%" }}>
-                    ViteReacTGram
+                    {screenWidth > 768 && <>ViteReacTGram</>}
                   </h1>
                 </div>
               </div>

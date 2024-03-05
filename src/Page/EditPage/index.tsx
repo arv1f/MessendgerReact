@@ -21,7 +21,7 @@ export default function EditPage() {
   const parameters = useParams<{ contactId: string }>();
   const thisUser = data[Number(parameters.contactId)];
   const navigane = useNavigate();
-  const { setBackGround } = useBackGroundStore();
+  // const { setBackGround } = useBackGroundStore();
 
   const {
     register,
@@ -43,7 +43,7 @@ export default function EditPage() {
       alert("All fields are required");
     } else {
       navigane(`/contacts/${thisUser.id}`);
-      setBackGround(true);
+      // setBackGround(true);
     }
   };
 

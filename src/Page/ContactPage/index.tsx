@@ -4,8 +4,8 @@ import useGetUsersList from "../../hooks/GetUsersList";
 import { useBackGroundStore } from "../../store";
 
 export default function ContactPage() {
-  const { backGround, setBackGround, setUserWindow, userWindow } =
-    useBackGroundStore();
+  // const { backGround, setBackGround, setUserWindow, userWindow } =
+  //   useBackGroundStore();
 
   const { data } = useGetUsersList();
   const parameters = useParams<{ contactId: string }>();
@@ -17,11 +17,13 @@ export default function ContactPage() {
   return (
     <div
       className="ContainerContact"
-      style={{ backgroundColor: backGround ? "#202020" : "transparent" }}
+      style={{ backgroundColor: "#202020" }}
+      // style={{ backgroundColor: backGround ? "#202020" : "transparent" }}
     >
       <div style={{ marginLeft: "1%" }}>
         <div className="UserInfo">
-          {backGround ? (
+          {/* {backGround ? ( */}
+          {true ? (
             <>
               {<img src={thisUser.avatar} className="imgItemCont" />}{" "}
               {
@@ -40,20 +42,21 @@ export default function ContactPage() {
                 </h4>
               }
               {<h4>Notes: {<em>{thisUser.notes}</em>}</h4>}
-              <button
+              {/* <button
                 className="ButtonOption"
                 onClick={() => {
-                  setBackGround(false);
-                  setUserWindow(false);
+                  // setBackGround(false);
+                  // setUserWindow(false);
                   navigane(`/contacts/${thisUser.id}/edit`);
                 }}
               >
                 Редактировать{" "}
-              </button>
+              </button> */}
+              <div></div>
               <button
                 className="ButtonOption"
                 onClick={() => {
-                  setUserWindow(false);
+                  // setUserWindow(false);
                   navigane("/");
                 }}
               >
