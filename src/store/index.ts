@@ -1,35 +1,15 @@
-import { create } from "zustand";
+// import { create } from "zustand";
 
-interface IUseBackGroundStore {
-  backGround: boolean;
-  setBackGround: (o: boolean) => void;
-  userWindow: boolean;
-  setUserWindow: (o: boolean) => void;
-}
+// interface IUseBackGroundStore {
+//   backGround: boolean;
+//   setBackGround: (o: boolean) => void;
+//   userWindow: boolean;
+//   setUserWindow: (o: boolean) => void;
+// }
 
-export const useBackGroundStore = create<IUseBackGroundStore>((set) => ({
-  backGround: true,
-  setBackGround: (o: boolean) => set(() => ({ backGround: o })),
-  userWindow: false,
-  setUserWindow: (o: boolean) => set(() => ({ userWindow: o })),
-}));
-
-// import { User } from "../interface";
-// import { persist } from "zustand/middleware";
-
-// export const useMyStore = create<{
-//   users: User[];
-//   setUsers: (o) => void;
-// }>()(
-//   persist(
-//     (set) => ({
-//       users: [],
-//       setUsers: (o) => {
-//         set((state) => ({
-//           users: [...state.users, o],
-//         }));
-//       },
-//     }),
-//     { name: "users", version: 1 },
-//   ),
-// );
+// export const useBackGroundStore = create<IUseBackGroundStore>((set) => ({
+//   backGround: true,
+//   setBackGround: (o: boolean) => set(() => ({ backGround: o })),
+//   userWindow: false,
+//   setUserWindow: (o: boolean) => set(() => ({ userWindow: o })),
+// }));
